@@ -1,21 +1,7 @@
-const weatherContainer = document.querySelector(".js-weather");
-const API_KEY = getAPIKey("./secrets.txt");
+const weatherContainer = document.querySelector(".js-weather .weather_text");
+const API_KEY = "6afee353ad2c5bd1cf0344121a8b94ae";
 const COORDS = 'coords';
 const API_KEY_ERROR = "API_KEY_ERROR";
-
-function getAPIKey(file) {
-    const rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function() {
-        if(rawFile.readyState === 4) {
-            if(rawFile.state === 0 || rawFile.state === 200)
-                return rawFile.responseText;
-            else
-                return API_KEY_ERROR;
-        }
-    }
-    rawFile.send(null);
-}
 
 function getWeather(lat, lon) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
