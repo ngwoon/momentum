@@ -1,6 +1,5 @@
 # momentum-clonecoding
-크롬 앱 momentum 클론코딩 - Javascript TODOList by Nicolas
-
+크롬 앱 momentum 클론코딩 - Javascript TODOList by Nico
 ### Development Stack
 - HTML
 - CSS
@@ -10,3 +9,6 @@
 
 ### Preview
 ![preview](momentum-preview.png)
+
+### Demo
+[https://ngwoon.github.io/toys/momentum](https://ngwoon.github.io/toys/momentum)
